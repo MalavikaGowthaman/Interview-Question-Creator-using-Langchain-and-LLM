@@ -1,8 +1,23 @@
 import streamlit as st
 import os
-import csv  # Add the import for csv module
+import csv  # Import csv module
 from io import StringIO
 from src.helper import llm_pipeline  # Assuming your helper functions are in src.helper
+
+# CSS to set a background image from a URL
+page_bg_img = '''
+<style>
+body {
+    background-image: url(r"D:\HOPE\Gen AI\Langchain\Interview-Question-Creator-using-Langchain-and-LLM\background.jpg")
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Interview Question Generator")
 st.write("Upload a job description or interview material document (PDF or DOCX) to get interview questions to help you prepare.")
